@@ -1,1 +1,10 @@
+# Ignore Help folder
 Help/
+
+
+# Ignore file
+# file.txt
+
+
+# Ignore Filse with specific extension
+# *.txt
