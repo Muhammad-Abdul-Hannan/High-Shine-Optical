@@ -1,0 +1,517 @@
+
+
+#menu{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color:black;
+    transition: top 0.35s;
+    transition-timing-function: ease-in-out;
+}
+
+
+#menulist li a{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.884);
+}
+#menulist li{
+    padding: 20px;
+}
+
+#menulist li a:hover{
+    color: rgb(245, 231, 102);
+}
+
+
+#menu a img{
+    width: 170px;
+    height: 90px;
+}
+
+
+#SocialLinks a{
+    margin: 30px;
+}
+
+#menulist2 a{
+    font-size: 20px;
+    color: rgb(253, 253, 253);
+}
+
+#menulist2 li{
+    padding-top: 10px;
+}
+
+#menulist2 li a:hover{
+    color: gold;
+}
+
+#search1 button:hover{
+    color: gold;
+}
+
+@media screen and (min-width: 680px) {
+    #Itemsdiv{
+        padding-left: 50px;
+        width: 60%;
+    }
+    #search1{
+        width: 30%;
+    }
+}
+
+#carousel{
+    position: relative;
+    top: 0px;
+    z-index: 3;
+}
+
+.carousel-caption:hover{
+    animation: heartBeat;
+    animation-duration: 2s;
+}
+
+#Description{
+    position: relative;
+    z-index: 2;
+}
+@media (min-width:600px) {
+    #Description{
+        height: 630px;
+    }
+    
+}
+
+@media (max-width:600px) {
+    #Description{
+        padding-top: 0;
+        height: 1350px;
+    }
+    
+}
+
+#About{
+    position: relative;
+    z-index: 2;
+}
+
+#SocialLinks{
+    position: relative;
+    z-index: 2;
+}
+
+#Footer{
+    position: relative;
+    z-index: 2;
+}
+
+#gallary{
+    position: relative;
+    z-index: 2;
+}
+
+#SocialLinks .btn{
+    display: inline-block;
+    background-color: rgb(255, 251, 251);
+    width: 60px;
+    height: 60px;
+    line-height: 40px;
+    margin: 25px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000022;
+    cursor: pointer;
+}
+
+#SocialLinks .btn ion-icon{
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+#SocialLinks .btn ion-icon {
+    color: var(--color);
+}
+
+#SocialLinks .btn:before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background-color: var(--color);
+    transform: rotate(45deg);
+}
+
+#SocialLinks .btn:before {
+    top: 90%;
+    left: -110%;
+}
+
+#SocialLinks .btn:hover:before {
+    top: -10%;
+    left: -10%;
+}
+
+#SocialLinks .btn:hover ion-icon {
+    color: #fff;
+    transform: scale(1.3);
+}
+
+#SocialLinks .btn,
+#SocialLinks .btn:before,
+#SocialLinks .btn ion-icon {
+    transition: all 0.5s;
+    transition-timing-function: 
+      cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+
+
+/* ---------------Side Icons Css------------------- */
+@media (max-width:600px) {
+    .SideIcons{
+        display: none;
+    }
+    
+}
+.SideIcons{
+    width: 50px;
+    height: 270px;
+    position: fixed;
+    top: 180px;
+    z-index: 3;
+}
+
+.SideIcons .btn1{
+    display: inline-block;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    margin: 10px 0px 0px 5px;
+    border-radius: 10px;
+    position: relative;
+    line-height: 38px;
+    z-index: 0;
+}
+
+.SideIcons .btn1 ion-icon{
+    font-size: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.SideIcons .btn1 ion-icon {
+    color: var(--color);
+}
+
+/* bg before  */
+
+.SideIcons .btn1::before{
+    top: 0;
+    display: none;
+    width: 92px;
+    height: 40px;
+    border-radius: 0 10px 10px 0px;
+    font-size: large;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    padding-left: 6px;
+    z-index: -1;
+}
+
+.SideIcons #btn1::before{
+    content: "Facebook";
+    position: absolute;
+    background-color: #4267B2;
+}
+
+.SideIcons #btn2::before{
+    content: "Twitter";
+    position: absolute;
+    background-color: #3CF;
+}
+
+.SideIcons #btn3::before{
+    content: "Youtube";
+    position: absolute;
+    background-color: #f83117;
+}
+
+.SideIcons #btn4::before{
+    content: "Github";
+    position: absolute;
+    background-color: #333;
+}
+
+.SideIcons #btn5::before{
+    content: "Linkedin";
+    position: absolute;
+    background-color: #0e76a8;
+}
+
+.SideIcons .btn1:hover::before{
+    display: block;
+    animation-name: example;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+@keyframes example {
+    from{
+        margin-left: 15px;
+    }
+    to{
+        margin-left: 33px;
+    }
+}
+
+.SideIcons .btn1 .btnD1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.SideIcons .btn1 .btnD2::before {
+    content: '';
+    position: absolute;
+    width: 160%;
+    height: 160%;
+    background-color: var(--color);
+    transform: rotate(55deg);
+
+}
+ 
+.SideIcons .btn1 .btnD2:before {
+    top: 105%;
+    left: 0%;
+}
+
+.SideIcons .btn1 .btnD2:hover:before
+ {
+    top: 0%;
+    left: 0%;
+}
+
+.SideIcons .btn1 .btnD2:hover ion-icon {
+    color: #fff;
+    transform: scale(0.7);
+}
+
+.SideIcons .btn1,
+.SideIcons .btn1:before,
+.SideIcons .btn1 ion-icon {
+    transition: all 0.35s;
+    transition-timing-function: 
+      cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+/* ---------------Side Icons Css Ends------------------- */
+
+
+/* ----------------Login form CSS---------------------- */
+
+
+.center button{
+    
+    padding: 8px 25px;
+    border: none;
+    background: #000000;
+    color: rgb(255, 249, 249);
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    margin: 0;
+    z-index: 0;
+    border-radius: 12px;
+    float: left;
+}
+
+.center button:hover{
+    background-color: #222;
+    color: gold;
+}
+
+
+/* popup css */
+.popup{
+    position: fixed;
+    display: none;
+    top: 60%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+
+.popup.active:hover{
+    background-color:rgba(12, 12, 11, 0.9);
+}
+
+.popup.active:hover h2{
+    color: rgb(252, 252, 252)
+}
+
+.popup.active:hover .formLabel{
+    color: rgb(252, 252, 252)
+}
+
+.popup.active:hover .form-element a{
+    color: rgb(87, 160, 255);
+}
+
+.popup.active{
+    top:55%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+    opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+}
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 21px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.popup .form h2{
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+.popup .form .form-element{
+    margin: 15px 0px;
+}
+.popup .form .form-element label{
+    font-size: 18px;
+    color: #222;
+}
+.popup .form .form-element input[type='text'],
+.popup .form .form-element input[type='password']{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+.popup .form .form-element input[type='check']
+{
+    margin-right: 5px;
+}
+.popup .form .form-element button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.popup .form .form-element a {
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* gallare css */
+
+
+.container1{
+    height: 290px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.container1 .imga{
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container1 .imga .cont1img1{
+    width: 143%;
+    height: 100%;
+    position: relative;
+    left: -83px;
+    top: 0px;
+    opacity: 1;
+    transition: left 0.35s, filter 0.35s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.container1 .imga .cont1img1:hover{
+    position: relative;
+    left: -56px;
+    filter: brightness(70%);
+    
+}
+
+/* background image */
+#Description{
+    background: url("Images/beforeimg1.jpg");
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+#Description:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#gallary{
+    background: url("Images/slider3.jpg");
+    background-size: cover;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+
+/* General Description section Css Start */
+
+.specials .nav-tabs:active {
+    border: 20px;
+}
+
+.specials .nav-tabs{
+    border: 0;
+}
+
+.specials .tab-pane.active {
+    animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out;
+}
