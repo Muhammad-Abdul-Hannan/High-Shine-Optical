@@ -1,14 +1,19 @@
 
-
 #menu{
     position: sticky;
     top: 0;
     z-index: 5;
-    background-color:black;
     transition: top 0.35s;
     transition-timing-function: ease-in-out;
 }
 
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:active{
+    border: none;
+}
 
 #menulist li a{
     font-size: 20px;
@@ -29,10 +34,6 @@
 }
 
 
-#SocialLinks a{
-    margin: 30px;
-}
-
 #menulist2 a{
     font-size: 20px;
     color: rgb(253, 253, 253);
@@ -50,7 +51,7 @@
     color: gold;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 900px) {
     #Itemsdiv{
         padding-left: 50px;
         width: 60%;
@@ -58,7 +59,12 @@
     #search1{
         width: 30%;
     }
+    #logoAncchor{
+        width: 20%;
+    }
 }
+
+/* Carouser CSS */
 
 #carousel{
     position: relative;
@@ -71,104 +77,14 @@
     animation-duration: 2s;
 }
 
-#Description{
-    position: relative;
-    z-index: 2;
-}
-@media (min-width:600px) {
-    #Description{
-        height: 630px;
-    }
-    
-}
-
-@media (max-width:600px) {
-    #Description{
-        padding-top: 0;
-        height: 1350px;
-    }
-    
-}
-
-#About{
-    position: relative;
-    z-index: 2;
-}
-
-#SocialLinks{
-    position: relative;
-    z-index: 2;
-}
-
 #Footer{
     position: relative;
     z-index: 2;
 }
 
-#gallary{
-    position: relative;
-    z-index: 2;
-}
 
-#SocialLinks .btn{
-    display: inline-block;
-    background-color: rgb(255, 251, 251);
-    width: 60px;
-    height: 60px;
-    line-height: 40px;
-    margin: 25px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 30%;
-    box-shadow: 0 5px 15px -5px #00000022;
-    cursor: pointer;
-}
-
-#SocialLinks .btn ion-icon{
-    font-size: 30px;
-    vertical-align: middle;
-}
-
-#SocialLinks .btn ion-icon {
-    color: var(--color);
-}
-
-#SocialLinks .btn:before {
-    content: '';
-    position: absolute;
-    width: 120%;
-    height: 120%;
-    background-color: var(--color);
-    transform: rotate(45deg);
-}
-
-#SocialLinks .btn:before {
-    top: 90%;
-    left: -110%;
-}
-
-#SocialLinks .btn:hover:before {
-    top: -10%;
-    left: -10%;
-}
-
-#SocialLinks .btn:hover ion-icon {
-    color: #fff;
-    transform: scale(1.3);
-}
-
-#SocialLinks .btn,
-#SocialLinks .btn:before,
-#SocialLinks .btn ion-icon {
-    transition: all 0.5s;
-    transition-timing-function: 
-      cubic-bezier(0.31, -0.105, 0.43, 1.59);
-}
-
-
-
-/* ---------------Side Icons Css------------------- */
-@media (max-width:600px) {
+/* ------------------------------------------------- Side Icons Css ----------------------------------------------- */
+@media (max-width:980px) {
     .SideIcons{
         display: none;
     }
@@ -323,12 +239,12 @@
     background: #000000;
     color: rgb(255, 249, 249);
     cursor: pointer;
-    position: absolute;
+    position: relative;
     top: 30%;
     margin: 0;
     z-index: 0;
     border-radius: 12px;
-    float: left;
+    /* float: left; */
 }
 
 .center button:hover{
@@ -440,6 +356,265 @@
 }
 
 
+/* -------------------------------------------------- Description ---------------------------------------------------------- */
+
+@media (min-width:1000px) {
+    #Description{
+        height: 630px;
+    }
+    #Description .DesDiv2{
+        height: 40%;
+        position: relative;
+    }
+    #Description .DesDiv2 h4{
+        width: 100%;
+        position:absolute;
+        top: 65%;
+        left: 10%;
+    }
+    #Description .DesDiv2 p{
+        width: 80%;
+        position:absolute;
+        top: 85%;
+        left: 10%;
+    }
+    #Description .DesDiv3{
+        position: relative;
+        height: 100%;
+    }
+    #Description .DesDiv3 img{
+        position:absolute;
+        top: 20%;
+        right: 10%;
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width:1000px) {
+    #Description{
+        padding: 0;
+        height: 680px;
+        margin: 0;
+    }
+    #Description .DesDiv2{
+        height: 50%;
+        width: 100%;
+        padding: 10% 0 0 0;
+        position:relative;
+        margin: 0;
+    }
+    #Description .DesDiv2 h4{
+        margin: 0;
+        text-align: center;
+    }
+    #Description .DesDiv2 p{
+        padding: 0 10px 0 10px;
+        margin: 0;
+        text-align: center;
+        justify-content: left;
+    }
+    #Description .DesDiv3{
+        margin: 0;
+        height: 50%;
+        width: 100%;
+        padding: 0 0 10% 0;
+    }
+    #Description .DesDiv3 .DesDiv3img{
+        width: 60%;
+        height: 100%;
+        position:relative;
+        margin: 0 auto 0 auto;
+    }
+    #Description .DesDiv3 img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#Description{
+    position: relative;
+    z-index: 2;
+}
+
+/* background image */
+#Description{
+    background: url("beforeimg1.jpg");
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+#Description:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* --------------------------Description-------------------Css---------------------Ends------------------------------------------ */
+
+
+
+/* -------------------------------------------------- General Description section Css Start -----------------------------------*/
+
+@media (min-width:1000px){
+    .specials{
+        padding-left: 40px;
+    }
+    .specials .tab-content .cont-img img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width:1000px){
+    .specials .nav-link{
+        border-right: none !important;
+    }
+    #specials .tab-content .cont-img img{
+        margin-top: 30px;
+        width: 60%;
+        height: 100%;
+    }
+}
+
+.specials{
+    background-color: #000000;
+}
+
+.specials .title h2{
+    color: rgb(249, 250, 168);
+    margin-bottom: 50px;
+}
+
+.specials .title p{
+    color: rgb(201, 199, 199);
+}
+
+.specials .nav-tabs{
+    border: 0;
+}
+
+.specials .tab-pane.active {
+    animation: fadeIn 0.35s ease-in-out;
+}
+
+.specials .nav-link{
+    color: rgb(249, 250, 168);
+    border-radius: 0;
+    transition: 0.35s ease-in-out;
+    border-right: 2px solid rgb(249, 250, 168);
+}
+
+.specials .nav-link:hover {
+    color: rgb(249, 250, 168);
+}
+  .specials .nav-link.active {
+    color: #1a1814;
+    background: rgb(249, 250, 168);
+    border-color: rgb(249, 250, 168);
+}
+  .specials .nav-link:hover {
+    border-color: rgb(249, 250, 168);
+}
+
+.specials .cont-des h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.specials .cont-des p{
+    color: rgb(201, 199, 199);
+}
+/* --------------------------General-------------------Css---------------------Ends------------------------------------------ */
+
+
+/* ------------------------------------------------------- About Css ------------------------------------------------------*/
+
+@media (min-width:1000px){
+    #About .about-img1 img{
+        width: 40%;
+        height: 50%;
+    }
+    #About .about-img2 img{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media only screen and (min-width:700px) and (max-width:1000px){
+    #About .about-img1 img{
+        width: 30%;
+        height: 60%;
+    }
+    #About .about-img2 img{
+        width: 30%;
+        height: 60%;
+    }
+}
+
+@media (max-width:700px){
+    #About .about-img1 img{
+        width: 40%;
+        height: 50%;
+    }
+    #About .about-img2 img{
+        width: 40%;
+        height: 55%;
+    }
+}
+
+#About{
+    position: relative;
+    z-index: 2;
+}
+
+#About{
+    background: url("gal6.jpg");
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+#About:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* ----------------------------------About------------------------------------ Ends ----------------------------------------------*/
+
+
+/* ----------------------------------------------------- Gallary Css ------------------------------------------------------*/
+
+@media (max-width:1000px){
+   
+    .container1{
+        margin-top: 25px;
+    }
+}
+
+@media (max-width:1000px){
+    
+}
+
+#gallary{
+    position: relative;
+    z-index: 2;
+}
+
+
 /* gallare css */
 
 
@@ -447,6 +622,11 @@
     height: 290px;
     z-index: 2;
     overflow: hidden;
+    box-shadow: 5px 10px 18px grey;
+}
+
+.container1:hover{
+    box-shadow: 5px 10px 18px rgb(236, 238, 106);
 }
 
 .container1 .imga{
@@ -457,7 +637,7 @@
 
 .container1 .imga .cont1img1{
     width: 143%;
-    height: 100%;
+    height: 102%;
     position: relative;
     left: -83px;
     top: 0px;
@@ -474,44 +654,97 @@
     
 }
 
-/* background image */
-#Description{
-    background: url("Images/beforeimg1.jpg");
-    background-size: cover;
+/* ----------------------------------About------------------------------------ Ends ----------------------------------------------*/
+
+
+/* ----------------------------------------------------- Social Icon Css ------------------------------------------------------*/
+
+@media (min-width:700px){
+    #SocialLinks .btn{
+        margin: 25px;
+    }
+}
+
+@media (max-width:700px){
+    #SocialLinks .btn{
+        margin: 10px;
+    }
+}
+
+
+#SocialLinks a{
+    margin: 30px;
+}
+
+
+#SocialLinks{
     position: relative;
-    padding: 0;
-    background-attachment: fixed;
+    z-index: 2;
 }
 
-#Description:before {
-    content: "";
-    background: rgba(0, 0, 0, 0.9);
+#SocialLinks .btn{
+    display: inline-block;
+    background-color: rgb(255, 251, 251);
+    width: 60px;
+    height: 60px;
+    line-height: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000022;
+    cursor: pointer;
+}
+
+#SocialLinks .btn ion-icon{
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+#SocialLinks .btn ion-icon {
+    color: var(--color);
+}
+
+#SocialLinks .btn:before {
+    content: '';
     position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
+    width: 120%;
+    height: 120%;
+    background-color: var(--color);
+    transform: rotate(45deg);
 }
 
-#gallary{
-    background: url("Images/slider3.jpg");
-    background-size: cover;
-    padding: 0;
-    background-attachment: fixed;
+#SocialLinks .btn:before {
+    top: 90%;
+    left: -110%;
 }
 
-
-/* General Description section Css Start */
-
-.specials .nav-tabs:active {
-    border: 20px;
+#SocialLinks .btn:hover:before {
+    top: -10%;
+    left: -10%;
 }
 
-.specials .nav-tabs{
-    border: 0;
+#SocialLinks .btn:hover ion-icon {
+    color: #fff;
+    transform: scale(1.3);
 }
 
-.specials .tab-pane.active {
-    animation: fadeIn 0.5s ease-out;
-    animation: fadeIn 0.5s ease-out;
+#SocialLinks .btn,
+#SocialLinks .btn:before,
+#SocialLinks .btn ion-icon {
+    transition: all 0.5s;
+    transition-timing-function: 
+      cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+/* ----------------------------------Social Icon------------------------------------ Ends ----------------------------------------------*/
+
+
+
+
+@media (min-width:1000px){
+
+}
+
+@media (max-width:1000px){
+    
 }
