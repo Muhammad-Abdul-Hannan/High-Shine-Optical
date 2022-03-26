@@ -19,9 +19,10 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-        document.getElementById("menu").style.top = "0";
+        document.getElementById("gn-menu").style.top = "0";
     } else {
-        document.getElementById("menu").style.top = "-100px";
+        document.getElementById("gn-menu").style.top = "-65px";
     }
     prevScrollpos = currentScrollPos;
 }
+
