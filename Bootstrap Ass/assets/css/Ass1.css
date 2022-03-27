@@ -224,10 +224,16 @@ z-index: 10;
 /*----------------------------------------- Carouser CSS -----------------------------------*/
 
 #carousel{
+    height: 92%;
     position: relative;
     top: 60px;
     z-index: 3;
     overflow: hidden;
+}
+
+#carousel .carousel-item img{
+    height: 700px;
+    width: 100%;
 }
 
 .carousel-caption:hover{
@@ -858,6 +864,7 @@ html {
 }
 
 /* popup css */
+
 .popup{
     position: fixed;
     display: none;
@@ -950,7 +957,7 @@ html {
 /* --------------------- Login form ----------------- CSS------------- Ends ----------------- */
 
 /*------------------------------------ Sections General -----------------------------------*/
-section {
+  #gallery {
     padding: 60px 0;
     overflow: hidden;
   }
@@ -1041,3 +1048,8 @@ section {
   }
 }
 
+
+
+section {
+    height: 100vh;
+}
