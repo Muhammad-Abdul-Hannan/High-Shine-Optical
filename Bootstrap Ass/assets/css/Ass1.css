@@ -38,6 +38,58 @@
     width: 20%;
 }
 
+
+@media (min-width:1157px){
+    .bi-list{
+        display: none;
+    }
+    .mainlist{
+        position: absolute;
+        display: block;
+        float: right;
+        left: 230px;
+        top: 4px;
+        margin: 0;
+        padding: 0;
+        height: 30px;
+        background-color: red;
+
+    }
+    .mainlist li{
+        display: inline-block;
+        margin: 3px;
+    }
+    .mainlist li a{
+        padding: 5px;
+        height: 50px;
+        color: #E1C16E;
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    .mainlist i{
+        padding-right: 5px;
+        font-size: 20px;
+    }
+    .gn-menu-main .gn-trigger a {
+        display: none;
+    }
+    .gn-menu-wrapper,
+    .gn-scroller{
+        display: none;
+    }
+}
+
+@media (max-width:1157px){
+    .mainlist{
+        display: none;
+    }
+    .gn-menu-main .gn-trigger a {
+        display: block;
+    }
+}
+
 /* Icomoon.com */
 #menucontainer{
 position: absolute;
@@ -59,46 +111,39 @@ z-index: 10;
     line-height: 60px;
 }
 .gn-menu-main {
+    box-shadow: 10px 0px 10px 5px grey;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 65px;
-    font-size: 13px;
     margin: 0;
     padding: 0;
     transition: top 0.35s ease-in-out;
 }
-.gn-menu-main a {
-    display: block;
+.gn-menu-main .gn-trigger a {
     height: 100%;
     color: #E1C16E;
     text-decoration: none;
     cursor: pointer;
 }
-.gn-menu-main a:hover,
-.gn-menu li.gn-search-item:hover,
-.gn-menu li.gn-search-item:hover a{
+.gn-menu-main a:hover{
     background: #E1C16E;
     color: white;
-}
-.gn-menu-main > li {
-    display: block;
-    float: right;
-    height: 100%;
-    border-right: 1px solid #c6d0da;
-    text-align: center;
 }
 
 /* icon-only trigger (menu item) */
 .gn-menu-main li.gn-trigger {
+    display: block;
     position: fixed;
     height: 50px;
     width: 60px;
     float: right;
-    right: 0;
-    top:10px;
+    right: -5px;
+    top:14px;
+    text-align: center;
 }
+
 .gn-menu-wrapper {
     position: fixed;
     top: 65px;
@@ -122,11 +167,10 @@ z-index: 10;
     height: 100%;
 }
 .gn-menu {
-    border-bottom: 1px solid #E1C16E;
     text-align: left;
     font-size: 18px;
 }
-.gn-icon::before {
+.bi-list::before {
     display: inline-block;
     width: 60px;
     text-align: center;
@@ -140,7 +184,7 @@ z-index: 10;
     -webkit-font-smoothing: antialiased;
 }
 
-.gn-icon-menu::before {
+.bi-list::before {
     margin-left: 0px;
     vertical-align: 3px;
     width: 30px;
@@ -149,7 +193,7 @@ z-index: 10;
     box-shadow: 0 3px white, 0 -6px #E1C16E, 0 -9px white, 0 -12px #E1C16E;
     content: '';
 }
-.gn-icon-menu:hover::before{
+.bi-list:hover::before{
     background: white;
     box-shadow: 0 3px #E1C16E, 0 -6px white, 0 -9px #E1C16E, 0 -12px white;
 }
@@ -190,275 +234,7 @@ z-index: 10;
     animation: heartBeat;
     animation-duration: 2s;
 }
-
-#Footer{
-    position: relative;
-    z-index: 2;
-}
-
-
-/* ------------------------------------- Side Icons Css----------------------------------------- */
-@media (max-width:980px) {
-    .SideIcons{
-        display: none;
-    }
-    
-}
-.SideIcons{
-    width: 50px;
-    height: 270px;
-    position: fixed;
-    top: 180px;
-    z-index: 3;
-}
-
-.SideIcons .btn1{
-    display: inline-block;
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    margin: 10px 0px 0px 5px;
-    border-radius: 10px;
-    position: relative;
-    line-height: 38px;
-    z-index: 0;
-}
-
-.SideIcons .btn1 ion-icon{
-    font-size: 30px;
-    vertical-align: middle;
-    margin-left: 5px;
-}
-
-.SideIcons .btn1 ion-icon {
-    color: var(--color);
-}
-
-/* bg before  */
-
-.SideIcons .btn1::before{
-    top: 0;
-    display: none;
-    width: 92px;
-    height: 40px;
-    border-radius: 0 10px 10px 0px;
-    font-size: large;
-    text-align: center;
-    color: white;
-    letter-spacing: 1px;
-    padding-left: 6px;
-    z-index: -1;
-}
-
-.SideIcons #btn1::before{
-    content: "Facebook";
-    position: absolute;
-    background-color: #4267B2;
-}
-
-.SideIcons #btn2::before{
-    content: "Twitter";
-    position: absolute;
-    background-color: #3CF;
-}
-
-.SideIcons #btn3::before{
-    content: "Youtube";
-    position: absolute;
-    background-color: #f83117;
-}
-
-.SideIcons #btn4::before{
-    content: "Github";
-    position: absolute;
-    background-color: #333;
-}
-
-.SideIcons #btn5::before{
-    content: "Linkedin";
-    position: absolute;
-    background-color: #0e76a8;
-}
-
-.SideIcons .btn1:hover::before{
-    display: block;
-    animation-name: example;
-    animation-duration: 0.25s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-}
-
-
-
-@keyframes example {
-    from{
-        margin-left: 15px;
-    }
-    to{
-        margin-left: 33px;
-    }
-}
-
-.SideIcons .btn1 .btnD1{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.SideIcons .btn1 .btnD2::before {
-    content: '';
-    position: absolute;
-    width: 160%;
-    height: 160%;
-    background-color: var(--color);
-    transform: rotate(55deg);
-
-}
- 
-.SideIcons .btn1 .btnD2:before {
-    top: 105%;
-    left: 0%;
-}
-
-.SideIcons .btn1 .btnD2:hover:before
- {
-    top: 0%;
-    left: 0%;
-}
-
-.SideIcons .btn1 .btnD2:hover ion-icon {
-    color: #fff;
-    transform: scale(0.7);
-}
-
-.SideIcons .btn1,
-.SideIcons .btn1:before,
-.SideIcons .btn1 ion-icon {
-    transition: all 0.35s;
-    transition-timing-function: 
-      cubic-bezier(0.31, -0.105, 0.43, 1.59);
-}
-/* --------------------------------------Side Icons Css Ends---------------------------------- */
-
-
-/* --------------------------------------Login form CSS-------------------------------------- */
-.logindiv{
-    position: fixed;
-    bottom: 20px;
-    right: 5px;
-    z-index: 20;
-}
-
-.center button{
-    
-    padding: 8px 20px;
-    border: none;
-    background: #E1C16E;
-    color: white;
-    cursor: pointer;
-    margin: 0;
-    border-radius: 12px;
-    float: right;
-}
-
-.center button:hover{
-    background-color: #d8ac3c;
-    color: white;
-}
-
-
-/* popup css */
-.popup{
-    position: fixed;
-    display: none;
-    top: 60%;
-    left: 50%;
-    opacity: 0;
-    transform: translate(-50%,-50%) scale(1.25);
-    width: 380px;
-    padding: 20px 30px;
-    background: #E1C16E;
-    box-shadow: 2px 2px 5px 0px #E1C16E;
-    border-radius: 10px;
-    transition: top 0ms ease-in-out 200ms,
-                opacity 200ms ease-in-out 0ms,
-                transform 200ms ease-in-out 0ms;
-}
-
-.popup.active:hover .form-element a{
-    color: rgb(0, 109, 252);
-}
-
-.popup.active{
-    top:55%;
-    opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
-    transition: top 0ms ease-in-out 0ms,
-    opacity 200ms ease-in-out 0ms,
-    transform 200ms ease-in-out 0ms;
-}
-.popup .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 25px;
-    height: 25px;
-    background: #E1C16E;
-    color: #eee;
-    text-align: center;
-    line-height: 21px;
-    border-radius: 15px;
-    cursor: pointer;
-}
-.popup .form h2{
-    text-align: center;
-    color: #222;
-    margin: 10px 0px 20px;
-    font-size: 25px;
-}
-.popup .form .form-element{
-    margin: 15px 0px;
-}
-.popup .form .form-element label{
-    font-size: 18px;
-    color: #222;
-}
-.popup .form .form-element input[type='text'],
-.popup .form .form-element input[type='password']{
-    margin-top: 5px;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    outline: none;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-}
-.popup .form .form-element input[type='check']
-{
-    margin-right: 5px;
-}
-.popup .form .form-element button{
-    width: 100%;
-    height: 40px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background: #222;
-    color: #f5f5f5;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.popup .form .form-element a {
-    display: block;
-    text-align: right;
-    font-size: 15px;
-    color: #1a79ca;
-    text-decoration: none;
-    font-weight: 600;
-}
-
+/*---------------------------------- Carouser CSS Ends -----------------------------------*/
 
 /* -------------------------------- Description ----------------------------------- */
 
@@ -562,9 +338,7 @@ z-index: 10;
 
 /* --------------------------Description---------Css----------Ends----------------------- */
 
-
-
-/* --------------------------- Special Offers Css Start---------------------*/
+/* --------------------------- Special Offers Css Start -------------------------------*/
 
 @media (min-width:1000px){
     .specials{
@@ -635,26 +409,76 @@ z-index: 10;
 .specials .cont-des p{
     color: rgb(201, 199, 199);
 }
-/* ----------------------Special Offers---------Css-----------------Ends--------------- */
+/* ---------------------- Special Offers --------- Css ----------------- Ends --------------- */
 
-
-/* -------------------------------------- About Css -------------------------------------*/
-
-#About .about-img1 img{
-    width: 40%;
-    height: 50%;
-}
-#About .about-img2 img{
-    width: 50%;
-    height: 60%;
-}
-
-#About{
+/*------------------------------- Testimonials ------------------------------------*/
+.testimonials .testimonials-carousel, .testimonials .testimonials-slider {
+    overflow: hidden;
+  }
+  .testimonials .testimonial-item {
+    box-sizing: content-box;
+    min-height: 320px;
+  }
+  .testimonials .testimonial-item .testimonial-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    margin: -40px 0 0 40px;
     position: relative;
     z-index: 2;
+    border: 4px solid #E1C16E;
+  }
+  .testimonials .testimonial-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 45px;
+    color: white;
+  }
+  .testimonials .testimonial-item h4 {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 0 45px;
+  }
+  .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+    color: #E1C16E;
+    font-size: 26px;
+  }
+  .testimonials .testimonial-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative;
+  }
+  .testimonials .testimonial-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px;
+  }
+  .testimonials .testimonial-item p {
+    font-style: italic;
+    margin: 0 15px 0 15px;
+    padding: 20px 20px 60px 20px;
+    background: #1a1814;
+    color: #E1C16E;
+    position: relative;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+  }
+  .testimonials .swiper-pagination {
+    margin-top: 30px;
+    position: relative;
+  }
+  .testimonials .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+  }
+  .testimonials .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #cda45e;
 }
-
-#About{
+#testimonials{
     background: url("../img/gal6.jpg");
     background-size: cover;
     position: relative;
@@ -662,7 +486,7 @@ z-index: 10;
     background-attachment: fixed;
 }
 
-#About:before {
+#testimonials:before {
     content: "";
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
@@ -671,31 +495,24 @@ z-index: 10;
     left: 0;
     right: 0;
 }
+/* ------------------ Testimonials ------------ Css-------------Ends---------------------------- */
 
+/* ------------------------------------- Our Work Css --------------------------------------*/
 
-/* -------------------------- About---------------------- Ends -------------------------*/
-
-
-/* ------------------------------------- Gallary Css --------------------------------------*/
-
-#gallary{
+#OurWork{
     position: relative;
     z-index: 2;
 }
-
-
-/* gallare css */
-
 
 .container1{
     height: 290px;
     z-index: 2;
     overflow: hidden;
-    box-shadow: 5px 10px 18px grey;
+    box-shadow: 5px 5px 18px grey;
 }
 
 .container1:hover{
-    box-shadow: 5px 10px 18px #E1C16E;
+    box-shadow: 5px 15px 18px grey;
 }
 
 .container1 .imga{
@@ -722,15 +539,28 @@ z-index: 10;
     filter: brightness(70%);
     
 }
+/* ----------------------- Our Work ------- CSS ---------------- Ends -------------------------------- */
 
-/* ------------------------About------------------ Ends -----------------------------*/
-
+/*-------------------------------------- Gallery ------------------------------------------*/
+.gallery .gallery-item {
+    overflow: hidden;
+    border-right: 3px solid #454035;
+    border-bottom: 3px solid #454035;
+  }
+  .gallery .gallery-item img {
+    transition: all ease-in-out 0.4s;
+  }
+  .gallery .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+/* ----------------------- Gallery ------- CSS ---------------- Ends -------------------------------- */
 
 /* ------------------------------- Social Icon Css ---------------------------------*/
 
 #SocialLinks{
     position: relative;
     z-index: 2;
+    display: inline-block;
 }
 
 @media (min-width:700px){
@@ -804,36 +634,322 @@ z-index: 10;
       cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 
-/* --------------------Social Icon---------------- Ends -------------------------------*/
+/* -------------------- Social Icon -------- CSS -------- Ends -------------------------------*/
 
-
-
-
-@media (min-width:1000px){
-
+/*---------------------------------- Footer CSS --------------------------------------*/
+#Footer{
+    position: relative;
+    z-index: 2;
+    background-color:black;
+    color: #E1C16E;
 }
+.footerlogo{
+    position: relative;
+    float: left;
+    font-size: 15px;
+}
+.footerlinks{
+    position: relative;
+    float: right;
+}
+.footerlinks li{
+    list-style: none;
+    padding-top: 5px;
+}
+.footerlinks li i{
+    color: #E1C16E;
+}
+.footerlinks li a{
+    padding: 2px;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    align-items: center;
+}
+.footerpara p{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+/*-------------------- Footer -------------- CSS ------- Ends -----------------------------------*/
 
-@media (max-width:1000px){
+/* ------------------------------------- Side Icons Css----------------------------------------- */
+@media (max-width:980px) {
+    .SideIcons{
+        display: none;
+    }
     
 }
+.SideIcons{
+    width: 50px;
+    height: 270px;
+    position: fixed;
+    top: 180px;
+    z-index: 3;
+}
 
+.SideIcons .btn1{
+    display: inline-block;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    margin: 10px 0px 0px 5px;
+    border-radius: 10px;
+    position: relative;
+    line-height: 38px;
+    z-index: 0;
+}
 
-/*-------------------------------------- Gallery ------------------------------------------*/
-.gallery .gallery-item {
+.SideIcons .btn1 ion-icon{
+    font-size: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.SideIcons .btn1 ion-icon {
+    color: var(--color);
+}
+
+/* bg before  */
+
+.SideIcons .btn1::before{
+    top: 0;
+    display: none;
+    width: 92px;
+    height: 40px;
+    border-radius: 0 10px 10px 0px;
+    font-size: large;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    padding-left: 6px;
+    z-index: -1;
+}
+
+.SideIcons #btn1::before{
+    content: "Facebook";
+    position: absolute;
+    background-color: #4267B2;
+}
+
+.SideIcons #btn2::before{
+    content: "Twitter";
+    position: absolute;
+    background-color: #3CF;
+}
+
+.SideIcons #btn3::before{
+    content: "Youtube";
+    position: absolute;
+    background-color: #f83117;
+}
+
+.SideIcons #btn4::before{
+    content: "Github";
+    position: absolute;
+    background-color: #333;
+}
+
+.SideIcons #btn5::before{
+    content: "Linkedin";
+    position: absolute;
+    background-color: #0e76a8;
+}
+
+.SideIcons .btn1:hover::before{
+    display: block;
+    animation-name: example;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes example {
+    from{
+        margin-left: 15px;
+    }
+    to{
+        margin-left: 33px;
+    }
+}
+
+.SideIcons .btn1 .btnD1{
+    position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    border-right: 3px solid #454035;
-    border-bottom: 3px solid #454035;
-  }
-  .gallery .gallery-item img {
-    transition: all ease-in-out 0.4s;
-  }
-  .gallery .gallery-item:hover img {
-    transform: scale(1.1);
-  }
+    border-radius: 10px;
+}
 
+.SideIcons .btn1 .btnD2::before {
+    content: '';
+    position: absolute;
+    width: 160%;
+    height: 160%;
+    background-color: var(--color);
+    transform: rotate(55deg);
+}
+ 
+.SideIcons .btn1 .btnD2:before {
+    top: 105%;
+    left: 0%;
+}
 
+.SideIcons .btn1 .btnD2:hover:before
+ {
+    top: 0%;
+    left: 0%;
+}
 
-  /*------------------------------------ Sections General -----------------------------------*/
+.SideIcons .btn1 .btnD2:hover ion-icon {
+    color: #fff;
+    transform: scale(0.7);
+}
+
+.SideIcons .btn1,
+.SideIcons .btn1:before,
+.SideIcons .btn1 ion-icon {
+    transition: all 0.35s;
+    transition-timing-function: 
+      cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+/* ------------------------ Side Icons -------------- Css -------------- Ends ----------------- */
+
+/*------------------------------------ Move Up ------------------------------------------*/
+.moveup a{
+    position: fixed;
+    bottom: 10px;
+    left: 1%;
+    z-index: 20;
+    font-size: 30px;
+    color: #cda45e;
+    width: 50px;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* --------------------- Move Up ----------------- CSS------------- Ends ----------------- */
+
+/* --------------------------------------Login form CSS-------------------------------------- */
+.logindiv{
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    z-index: 20;
+}
+
+.center button{
+    
+    padding: 8px 20px;
+    border: none;
+    background: #E1C16E;
+    color: white;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 12px;
+    float: right;
+}
+
+.center button:hover{
+    background-color: #d8ac3c;
+    color: white;
+}
+
+/* popup css */
+.popup{
+    position: fixed;
+    display: none;
+    top: 60%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #E1C16E;
+    box-shadow: 2px 2px 5px 0px #E1C16E;
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+
+.popup.active:hover .form-element a{
+    color: rgb(0, 109, 252);
+}
+
+.popup.active{
+    top:55%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+    opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+}
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    background: #E1C16E;
+    color: #eee;
+    text-align: center;
+    line-height: 21px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.popup .form h2{
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+.popup .form .form-element{
+    margin: 15px 0px;
+}
+.popup .form .form-element label{
+    font-size: 18px;
+    color: #222;
+}
+.popup .form .form-element input[type='text'],
+.popup .form .form-element input[type='password']{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+.popup .form .form-element input[type='check']
+{
+    margin-right: 5px;
+}
+.popup .form .form-element button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.popup .form .form-element a {
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --------------------- Login form ----------------- CSS------------- Ends ----------------- */
+
+/*------------------------------------ Sections General -----------------------------------*/
 section {
     padding: 60px 0;
     overflow: hidden;
@@ -872,113 +988,13 @@ section {
     font-size: 36px;
     font-weight: 700;
     font-family: "Playfair Display", serif;
-    color: #cda45e;
+    color: #E1C16E;
 }
+/*-------------- Section General ----------- Css --------- Ends ------------------------ */
 
 
-/*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
-.testimonials .testimonials-carousel, .testimonials .testimonials-slider {
-    overflow: hidden;
-  }
-  .testimonials .testimonial-item {
-    box-sizing: content-box;
-    min-height: 320px;
-  }
-  .testimonials .testimonial-item .testimonial-img {
-    width: 90px;
-    border-radius: 50%;
-    margin: -40px 0 0 40px;
-    position: relative;
-    z-index: 2;
-    border: 6px solid rgba(255, 255, 255, 0.2);
-  }
-  .testimonials .testimonial-item h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0 5px 45px;
-    color: white;
-  }
-  .testimonials .testimonial-item h4 {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
-    margin: 0 0 0 45px;
-  }
-  .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-    color: #d3af71;
-    font-size: 26px;
-  }
-  .testimonials .testimonial-item .quote-icon-left {
-    display: inline-block;
-    left: -5px;
-    position: relative;
-  }
-  .testimonials .testimonial-item .quote-icon-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
-  }
-  .testimonials .testimonial-item p {
-    font-style: italic;
-    margin: 0 15px 0 15px;
-    padding: 20px 20px 60px 20px;
-    background: #26231d;
-    position: relative;
-    border-radius: 6px;
-    position: relative;
-    z-index: 1;
-  }
-  .testimonials .swiper-pagination {
-    margin-top: 30px;
-    position: relative;
-  }
-  .testimonials .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.4);
-    opacity: 1;
-  }
-  .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #cda45e;
-  }
-
-
-
-/* Slider Css */
-#myCarousel{
-    background-color: green;
-    overflow: hidden;
-}
-
-#myCarousel .carousel-inner .item{
-    width: 100%;
-    height: 100%;
-}
-
-#myCarousel .carousel-inner{
-    width: 65%;
-    margin: 5% auto 5% auto;
-}
-
-#myCarousel .carousel-inner .item p{
-    font-size: large;
-    color: rgb(255, 255, 255);
-}
-#myCarousel .carousel-inner img{
-    border-radius: 100%;
-    width: 80px;
-    height: 80px;
-    position: relative;
-    bottom: 60%;
-    left: 60%;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-/* #preloader {
+/*------------------------------------------ Preloader ------------------------------------*/
+#preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -986,7 +1002,10 @@ section {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #1a1814;
+  background: white;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #preloader:before {
@@ -1020,4 +1039,5 @@ section {
   100% {
     transform: rotate(360deg);
   }
-} */
+}
+

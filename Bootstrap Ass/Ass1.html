@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon icon -->
+    <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon">
+
+    <!-- Font-awesome -->
+    <link href="path/to/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Vendor -->
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -16,7 +22,7 @@
     <!-- Main css -->
     <link href="assets/css/Ass1.css" rel="stylesheet" />
 
-    <title>Document</title>
+    <title>High Shine Optical</title>
 </head>
 <body class="p-0 m-0">
 
@@ -24,20 +30,30 @@
     <div class="container" id="menucontainer">
         <ul id="gn-menu" class="gn-menu-main">
             <a href="#" class="navbar-brand"><img id="logoimg1" src="assets/img/logoImg.PNG" alt=""></a>
+            <ul class="mainlist">
+                <li><a href="#"><i class="bi bi-house"></i>Home</a></li>
+                <li><a href="#Description"><i class="bi bi-window-split"></i>Description</a></li>
+                <li><a href="#specials"><i class="bi bi-megaphone"></i>Special Offers</a></li>
+                <li><a href="#testimonials"><i class="bi bi-file-earmark-person-fill"></i>About</a></li>
+                <li><a href="#OurWork"><i class="bi bi-images"></i>Our Work</a></li>
+                <li><a href="#gallery2"><i class="bi bi-images"></i>Gallery</a></li>
+                <li><a href="#SocialLinks"><i class="bi bi-globe"></i>Social Links</a></li>
+                <li><a href="#Footer"><i class="bi bi-person-lines-fill"></i>Contact Us</a></li>
+            </ul>
             <li class="gn-trigger">
-                <a class="gn-icon gn-icon-menu"></a>
+                <a class="bi bi-list"></a>
                 <nav class="gn-menu-wrapper">
                     <div class="gn-scroller">
                         <ul class="gn-menu" id="main-items-list">
                             <li><a href="#"><i class="bi bi-house"></i>Home</a></li>
                             <li><a href="#Description"><i class="bi bi-window-split"></i>Description</a></li>
                             <li><a href="#specials"><i class="bi bi-megaphone"></i>Special Offers</a></li>
-                            <li><a href="#About"><i class="bi bi-file-earmark-person-fill"></i>About</a></li>
+                            <li><a href="#testimonials"><i class="bi bi-file-earmark-person-fill"></i>About</a></li>
                             <li><a href="#OurWork"><i class="bi bi-images"></i>Our Work</a></li>
                             <li><a href="#gallery2"><i class="bi bi-images"></i>Gallery</a></li>
                             <li><a href="#SocialLinks"><i class="bi bi-globe"></i>Social Links</a></li>
                             <li><a href="#Footer"><i class="bi bi-person-lines-fill"></i>Contact Us</a></li>
-                            <li><i class="bi bi-search" id="searchIcon"></i><input placeholder="Search" type="search" id="menuSearch"></li>
+                            <li id="menusearch"><i class="bi bi-search" id="searchIcon"></i><input placeholder="Search" type="search" id="menuSearch"></li>
                         </ul>
                     </div><!-- /gn-scroller -->
                 </nav>
@@ -47,7 +63,7 @@
 
     <!------- carousel --------->
     <div id="carousel" class="container-fluid carousel slide col-12 p-0 mb-0" data-bs-ride="carousel" style="height: 590px;">
-        The slideshow carousel
+        <!-- The slideshow carousel -->
         <div class="carousel-item col-12" style="height: 100%;">
             <img src="assets/img/slider1.jpg" alt="img1" class="d-block col-12" style="height: 100%;">
             <div class="carousel-caption">
@@ -68,7 +84,7 @@
             <img src="assets/img/slider3.jpg" alt="img3" class="d-block col-12" style="height: 100%;">
         </div>
         
-        Left and right control icons
+        <!-- Left and right control icons -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" style="color: black;"></span></button>
         <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
     </div>
@@ -174,72 +190,9 @@
             </div>
         </div>
     </div>
-  
-    <!------------- About --------------->
-    <div class="container-fluid m-0 p-0"  id="About" style="background-color: black;">
-        <div class="about-img1 m-0 p-0 pt-5 row" data-aos="zoom-in" data-aos-delay="100" style = "color: #E1C16E; height: 50%;">
-            <div class="col-sm-11 col-md-6 col-lg-4 text-center m-0 p-0" style="height: 500px;">
-                <img src="assets/img/About1.jpg" alt="">
-                <h3 class="mt-5">
-                    M.A.Hannan
-                </h3>
-                <p>
-                    DEO Freelancer Zone
-                </p>
-            </div>
-            <div class="col-sm-11 col-md-6 col-lg-4 text-center m-0" style="height: 500px;">
-                <img src="assets/img/About1.jpg" alt="">
-                <h4 class="mt-5">
-                    M.A.Hannan
-                </h3>
-                <p>
-                    Data Entry Specialist Freelancer Zone
-                </p>
-            </div>
-            <div class="col-sm-11 col-md-6 col-lg-4 text-center m-0" style="height: 500px;">
-                <img src="assets/img/About1.jpg" alt="">
-                <h4 class="mt-5">
-                    M.A.Hannan
-                </h4>
-                <p>
-                    Web Developer Freelancer Zone
-                </p>
-            </div>
-        </div>
-
-        <div class="about-img2 mx-0 p-0 pt-5 row" style = "color: #E1C16E; height: 50%;" data-aos="zoom-in" data-aos-delay="100">
-            <div class="col-sm-11 col-md-6 col-lg-4 text-center m-0" style="height: 500px;">
-                <img class="rounded-circle" src="assets/img/About1.jpg" alt="">
-                <h3 class="mt-5">
-                    M.A.Hannan
-                </h3>
-                <p>
-                    DEO Freelancer Zone
-                </p>
-            </div>
-            <div class="col-sm-11 col-md-6 col-lg-4 text-center m-0" style="height: 500px;">
-                <img class="rounded-circle" src="assets/img/About1.jpg" alt="">
-                <h4 class="mt-5">
-                    M.A.Hannan
-                </h3>
-                <p>
-                    Data Entry Specialist Freelancer Zone
-                </p>
-            </div>
-            <div class="col-sm-11 col-md-6 col-lg-4 text-center m-0" style="height: 500px;">
-                <img class="rounded-circle" src="assets/img/About1.jpg" alt="">
-                <h4 class="mt-5">
-                    M.A.Hannan
-                </h4>
-                <p>
-                    Web Developer Freelancer Zone
-                </p>
-            </div>
-        </div>
-    </div>
 
     <!-- ======= About Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
+    <section id="testimonials" class="testimonials section-bg py-5">
         <div class="container" data-aos="fade-up">
   
           <div class="section-title">
@@ -257,7 +210,7 @@
                     Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
-                  <img src="assets/img/About1.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/avatar.png" class="testimonial-img" alt="">
                   <h3>Saul Goodman</h3>
                   <h4>Ceo &amp; Founder</h4>
                 </div>
@@ -270,7 +223,7 @@
                     Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
-                  <img src="assets/img/About1.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/avatar.jpg" class="testimonial-img" alt="">
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                 </div>
@@ -283,7 +236,7 @@
                     Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
-                  <img src="assets/img/About1.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/avatar.jpg" class="testimonial-img" alt="">
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
                 </div>
@@ -296,7 +249,7 @@
                     Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
-                  <img src="assets/img/About1.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/avatar.jpg" class="testimonial-img" alt="">
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
                 </div>
@@ -309,7 +262,7 @@
                     Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
-                  <img src="assets/img/About1.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/avatar.jpg" class="testimonial-img" alt="">
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
                 </div>
@@ -474,35 +427,44 @@
           </a>
     </div>
 
-        
-
     <!----------------- Footer ------------------>
-    <div class="container-fluid row m-0 col-12 mx-0 pb-0" style="background-color:rgba(0, 0, 0, 0.7); color: #E1C16E" id="Footer">
-        <div class="col-lg-3 col-12 mt-5 mx-0">
-            <a href="#" class="navbar-brand ps-4"><img id="logoimg1" src="assets/img/logoImg.PNG" alt="" ></a>
+    <div class="container-fluid row m-0 col-12 mx-0 pb-0" id="Footer">
+        <div class="footerlogo col-lg-4 col-12 mt-5 mx-0">
+            <a href="#" class="ps-4"><img id="logoimg1" src="assets/img/logoImg.PNG" alt="" ></a>
+            <pre style="color: white; font-size: 15px;" class="mt-3">
+    <i class="bi bi-telephone"></i>
+    0123456789
+    0123456789
+
+    <i class="bi bi-envelope"></i>                               
+    support@sunshineoptical.com
+    info@sunshineoptical.com
+
+    <i class="bi bi-geo-alt"></i>       
+    Ryk, Punjab, Pakistan</p></pre>
         </div>
 
-        <div class="col-lg-5 col-12 pt-5 mx-0">
+        <div class="footerlinks col-lg-3 col-12 mt-5 mx-0 pt-5 ps-5">
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Home</a></li>
+            <li><a href="#Description"><i class="bi bi-chevron-right"></i>Description</a></li>
+            <li><a href="#specials"><i class="bi bi-chevron-right"></i>Special Offers</a></li>
+            <li><a href="#testimonials"><i class="bi bi-chevron-right"></i>About</a></li>
+            <li><a href="#OurWork"><i class="bi bi-chevron-right"></i>Our Work</a></li>
+            <li><a href="#gallery2"><i class="bi bi-chevron-right"></i>Gallery</a></li>
+        </div>
+
+        <div class="footerpara col-lg-5 col-12 pt-5 mx-0 mt-5">
             <h4 class="">
-                <i class="bi bi-chevron-right"></i> 60" Suit Bag with 4" Gussetes Clear Garment Bags
+                60" Suit Bag with 4" Gussetes Clear Garment Bags
             </h4>
-            <p class="mt-4" style="font-size: large;
-            color: rgb(255, 255, 255);">
+            <p class="mt-5">
                 Each garment bags has 4" gussetes, it increase the storage capacity of one suit bag and allows to store more clothes, and a good 4" wide area that allows for the extra length to be gently folded and not all scrunched up.
             </p>
         </div>
-        <div class="col-lg-3 col-12 mx-0 mt-5">
-            <h4>Contact Info</h4>
-                <pre style="color: white;">
-Phone: 0123456789
-       0123456789
-                    
-Email: support@sunshineoptical.com
-info@sunshineoptical.com
-
-Address: Ryk, Punjab, Pakistan</p>
-                </pre>
-        </div>
+        <!-- Move Up -->
+    <div class="moveup" id="scrollToTopBtn">
+        <a href="#"><i class="bi bi-arrow-up-circle"></i></a>
+    </div>
     </div>
 
     <!--------------------- Login Button ------------------->
@@ -536,10 +498,8 @@ Address: Ryk, Punjab, Pakistan</p>
             </div>
     </div>
 
-
+    <!-- Preloader -->
     <div id="preloader"></div>
-
-    
 
     <!-- Vendor Script -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

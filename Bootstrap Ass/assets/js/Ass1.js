@@ -13,23 +13,7 @@ document.querySelector(".popup .close-btn").addEventListener("click",function(){
     document.querySelector(".popup").style.display="none";
 });
 
-
-// Navbar Scroll Script
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("gn-menu").style.top = "0";
-    } else {
-        document.getElementById("gn-menu").style.top = "-65px";
-    }
-    prevScrollpos = currentScrollPos;
-}
-
-
-/**
-   * Testimonials slider
-   */
+/** Testimonials slider */
  new Swiper('.testimonials-slider', {
     speed: 600,
     loop: true,
@@ -57,12 +41,28 @@ var currentScrollPos = window.pageYOffset;
   });
 
 
-  /**
-   * Preloader
-   */
-//    let preloader = select('#preloader');
-//    if (preloader) {
-//      window.addEventListener('load', () => {
-//        preloader.remove()
-//      });
-//    }
+let preloader = document.getElementById("preloader");
+let myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  preloader.style.opacity = '0';
+}
+let myVar2 = setInterval(myTimer2 ,2000);
+function myTimer2() {
+  preloader.style.visibility = 'hidden';
+}
+
+
+// Scroll up button Js
+//Get the button
+var mybutton = document.getElementById("scrollToTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
