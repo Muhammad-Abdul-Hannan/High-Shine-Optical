@@ -41,6 +41,7 @@ document.querySelector(".popup .close-btn").addEventListener("click",function(){
   });
 
 
+// Preloader
 let preloader = document.getElementById("preloader");
 let myVar = setInterval(myTimer ,1000);
 function myTimer() {
