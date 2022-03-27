@@ -222,17 +222,23 @@ z-index: 10;
 /* ------------------------------------- Menu Css Ends------------------------------------- */
 
 /*----------------------------------------- Carouser CSS -----------------------------------*/
+section.carousel {
+    height: 90.4vh;
+}
 
 #carousel{
-    height: 92%;
+    height: 100%;
     position: relative;
     top: 60px;
     z-index: 3;
     overflow: hidden;
 }
+#carousel .carousel-item{
+    height: 100%;
+}
 
 #carousel .carousel-item img{
-    height: 700px;
+    height: 100%;
     width: 100%;
 }
 
@@ -1046,10 +1052,4 @@ html {
   100% {
     transform: rotate(360deg);
   }
-}
-
-
-
-section {
-    height: 100vh;
 }

@@ -3,14 +3,12 @@ AOS.init();
 
 
 window.onload = function() {
-  
+  // Menu init
   new gnMenu( document.getElementById( 'gn-menu' ) );
-
+  // Functions called
   Preloader();
   swiper_user();
   login();
-
-
 }
 
 function login(){
@@ -54,8 +52,6 @@ function swiper_user(){
 }
 
 
- 
-
 function Preloader(){
   // Preloader
   let preloader = document.getElementById("preloader");
@@ -69,11 +65,8 @@ function Preloader(){
   }  
 }
 
-
-
-
 // Scroll up button Js
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 500px from the top of the document, show the button
 window.onscroll = function() {
   //Get the button
   var mybutton = document.getElementById("scrollToTopBtn");
