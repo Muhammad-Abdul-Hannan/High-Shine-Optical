@@ -101,7 +101,8 @@ function Preloader(){
   let preloader = document.getElementById("preloader");
   if (preloader) {
     window.addEventListener('load', () => {
-      preloader.remove()
+      preloader.style.opacity = '0';
+      preloader.style.visibility = 'hidden';
     });
   }
 }
