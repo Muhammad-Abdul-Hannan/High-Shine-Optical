@@ -362,6 +362,184 @@ section.carousel {
 
 /* --------------------------Description---------Css----------Ends----------------------- */
 
+/* -------------------------- Products CSS -------------------------------------------- */
+
+.ftco-section{
+    margin-bottom: 20px;
+}
+
+.section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: rgba(94, 94, 94, 0.2) !important;
+    margin: 4px 10px;
+  }
+
+.product{
+    overflow: hidden;
+    position: relative;
+    width: 365px;
+    height: 400px;
+    margin: 50px auto;
+    padding: 0;
+}
+  
+.product .img{
+    position: relative;
+    width: 365px;
+    height: 400px;
+}
+  
+.product .img img{
+    position: relative;
+    width: 365px;
+    height: 400px;
+}
+  
+.product .product-content{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+  
+.product:hover .product-content{
+    opacity: 1;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 212, 255, 0) 100%);
+}
+  
+.product .product-content .product-info{
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.product .product-content .product-info h4{
+    color: white;
+}
+
+.product .product-content .product-info i{
+    color: #E1C16E;
+}
+
+.product:hover .product-content .product-info{
+    bottom: 30px;
+}
+  
+.product .product-content .product-info span i:hover{
+    cursor: pointer;
+    color: gold;
+}
+  
+.product .product-icon-left{
+    position: absolute;
+    bottom: 50px;
+    left: -60px;
+    font-size: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
+    transition: left 0.3s ease-in-out;
+    background-color: #E1C16E;
+}
+  
+.product .product-icon-right{
+    position: absolute;
+    bottom: 50px;
+    right: -60px;
+    font-size: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
+    transition: right 0.3s ease-in-out;
+    background-color: #E1C16E;
+}
+
+.product .product-icon-left i,
+.product .product-icon-right i{
+    color: white;
+}
+  
+.product:hover .product-icon-left{
+    left: 0;
+}
+.product:hover .product-icon-right{
+    right: 0;
+}
+  
+.ftco-section .container {
+    overflow: hidden;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (max-width: 400px) {
+    .ftco-section .container {
+        max-width: 370px;
+    }
+}
+@media (max-width: 768px) {
+    .ftco-section .container {
+      max-width: 740px;
+    }
+}
+@media (max-width: 1150px) {
+    .ftco-section .container {
+      max-width: 1110px;
+    }
+}
+@media (max-width: 100vw) {
+    .ftco-section .container {
+      max-width: 92vw;
+    }
+}
+  
+.ftco-section .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+  
+.ftco-section .all-items{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+  
+.ftco-section .owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 0 20px 0 0;
+    padding-bottom: 10px;
+} 
+.ftco-section .owl-carousel .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.ftco-section .owl-carousel .owl-dots .owl-dot:hover, .owl-carousel .owl-dots .owl-dot:focus {
+    outline: none !important;
+}
+.ftco-section .owl-carousel .owl-dots .owl-dot.active {
+    background: #E1C16E;
+}
+/* ---------------- Products -------------- CSS ------------ Ends -------------------  */
+
 /* --------------------------- Special Offers Css Start -------------------------------*/
 
 @media (min-width:1000px){
@@ -387,15 +565,6 @@ section.carousel {
 
 .specials{
     background-color: #000000;
-}
-
-.specials .title h2{
-    color: #E1C16E;
-    margin-bottom: 50px;
-}
-
-.specials .title p{
-    color: rgb(201, 199, 199);
 }
 
 .specials .nav-tabs{
@@ -1008,7 +1177,6 @@ html {
     color: #aaaaaa;
     font-family: "Poppins", sans-serif;
   }
-  #specials .title p::after,
   .section-title h2::after {
     content: "";
     width: 120px;
