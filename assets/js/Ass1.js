@@ -98,7 +98,7 @@ function Preloader(){
   // function myTimer2() {
   //   preloader.style.visibility = 'hidden';
   // }  
-  let preloader = select('#preloader');
+  let preloader = document.getElementById("preloader");
   if (preloader) {
     window.addEventListener('load', () => {
       preloader.remove()
