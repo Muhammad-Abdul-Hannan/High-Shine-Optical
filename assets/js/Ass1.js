@@ -89,15 +89,21 @@ function swiper_user(){
 
 function Preloader(){
   // Preloader
-  let preloader = document.getElementById("preloader");
-  let myVar = setInterval(myTimer ,1000);
-  function myTimer() {
-    preloader.style.opacity = '0';
+  // let preloader = document.getElementById("preloader");
+  // let myVar = setInterval(myTimer ,1000);
+  // function myTimer() {
+  //   preloader.style.opacity = '0';
+  // }
+  // let myVar2 = setInterval(myTimer2 ,2000);
+  // function myTimer2() {
+  //   preloader.style.visibility = 'hidden';
+  // }  
+  let preloader = select('#preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      preloader.remove()
+    });
   }
-  let myVar2 = setInterval(myTimer2 ,2000);
-  function myTimer2() {
-    preloader.style.visibility = 'hidden';
-  }  
 }
 
 // Scroll up button Js
