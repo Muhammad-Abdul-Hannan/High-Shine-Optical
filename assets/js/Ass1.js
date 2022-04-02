@@ -98,13 +98,18 @@ function Preloader(){
   // function myTimer2() {
   //   preloader.style.visibility = 'hidden';
   // }  
+  // let preloader = document.getElementById("preloader");
+  // if (preloader) {
+  //   window.addEventListener('load', () => {
+  //     preloader.style.opacity = '0';
+  //     preloader.style.visibility = 'hidden';
+  //   });
+  // }
   let preloader = document.getElementById("preloader");
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.style.opacity = '0';
-      preloader.style.visibility = 'hidden';
-    });
-  }
+  $(window).load(function() {
+    preloader.style.opacity = '0';
+    preloader.style.visibility = 'hidden';
+  });
 }
 
 // Scroll up button Js
