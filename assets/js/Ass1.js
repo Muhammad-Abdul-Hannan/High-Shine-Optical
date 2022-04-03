@@ -86,9 +86,8 @@ function swiper_user(){
   });
 }
 
-
+// Preloader
 function Preloader(){
-  // Preloader
   let preloader = document.getElementById("preloader");
   let myVar = setInterval(myTimer ,1000);
   function myTimer() {
